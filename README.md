@@ -46,7 +46,7 @@ Find it difficult to solve [Wordle](https://www.powerlanguage.co.uk/wordle/)? He
   ))
   ```
 
-  
+
 
 * `solver`:  Solve Wordle games automatically
 
@@ -62,4 +62,14 @@ Find it difficult to solve [Wordle](https://www.powerlanguage.co.uk/wordle/)? He
   # evaluate on all 2.5k Wordle words 
   test_solver_all()
   ```
+
+
+
+### Notes
+
+`suggestion` is based on a simple greedy strategy: computes score of all words based on `freq` (The frequency that one letter appears at one position), and select the word with highest score.
+
+It is a rather simple method which can still be improved, for example we sometimes choose a word with unused characters to narrow down possible answers.
+
+`test_solver_all` now gives an average attempts of 3.8 times (maximum 8 times).
 
