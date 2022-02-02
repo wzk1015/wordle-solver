@@ -13,7 +13,7 @@ Find it difficult to solve [Wordle](https://www.powerlanguage.co.uk/wordle/)? He
 
   
 
-* `possible_words` / `possible_words_simple`: Narrow down all possible words given your previous attempt results
+* Narrow down all possible words given your previous attempt results
 
   ```python
   from solver import possible_words, possible_words_simple
@@ -34,7 +34,7 @@ Find it difficult to solve [Wordle](https://www.powerlanguage.co.uk/wordle/)? He
 
 
 
-* `suggestion`: Suggest your next attempt given your previous attempt results
+* Suggest your next attempt given your previous attempt results
 
   ```python
   from solver import suggestion
@@ -48,7 +48,7 @@ Find it difficult to solve [Wordle](https://www.powerlanguage.co.uk/wordle/)? He
 
 
 
-* `solver`:  Solve Wordle games automatically
+* Solve Wordle games automatically
 
   ```python
   from solver import solver, test_solver_single, test_solver_all
@@ -71,5 +71,5 @@ Find it difficult to solve [Wordle](https://www.powerlanguage.co.uk/wordle/)? He
 
 It is a rather simple method which can still be improved, for example we sometimes choose a word with unused characters to narrow down possible answers.
 
-`test_solver_all` now gives an average attempts of 3.8 times (maximum 8 times).
+`test_solver_all` now gives an average attempts of 3.8 times (maximum 8 times). Alternative methods on Github can be no greater than maxmimum 6 times.
 
