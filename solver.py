@@ -167,7 +167,7 @@ def solver():
         attempts.append(suggest)
 
 
-def test_solver_single(ans, silent=False):
+def test_solver_single(ans, silent=False, show_possible=True):
     ans = ans.lower()
     if not silent:
         print("answer:", ans)
@@ -175,7 +175,7 @@ def test_solver_single(ans, silent=False):
     round = 0
     while True:
         round += 1
-        suggest = suggestion(yellows, greens, blacks, attempts, show_possible=not silent)
+        suggest = suggestion(yellows, greens, blacks, attempts, show_possible=not silent and show_possible)
         if suggest == "NONE":
             pass
         result = get_result(ans, suggest)
@@ -205,6 +205,7 @@ def test_solver_all():
 
 if __name__ == '__main__':
     test_solver_all()
+    # test_solver_single('leafy', show_possible=False)
     # print(possible_words(
     #     yellows=["L2", "E5"],
     #     greens=["A3", "E2", "Y5"],

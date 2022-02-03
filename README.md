@@ -42,7 +42,8 @@ Find it difficult to solve [Wordle](https://www.powerlanguage.co.uk/wordle/)? He
   print(suggestion(
       yellows=["L2", "E5"],
       greens=["A3", "E2", "Y5"],
-      blacks=("S", "T", "M")
+      blacks=("S", "T", "M"),
+      attempts=['slate', 'mealy']
   ))
   ```
 
@@ -62,20 +63,52 @@ Find it difficult to solve [Wordle](https://www.powerlanguage.co.uk/wordle/)? He
   # evaluate on all 2.5k Wordle words 
   test_solver_all()
   ```
+  
+  
+  
+  `test_solver_single` works this way:
+  
+  ```
+  round 1, pred 'slate', got ⬛️🟨🟩⬛️🟨
+  round 2, pred 'mealy', got ⬛️🟩🟩🟨🟩
+  round 3, pred 'leaky', got 🟩🟩🟩⬛️🟩
+  round 4, pred 'leafy', got 🟩🟩🟩🟩🟩
+  ```
 
 
 
 * Play [Wordle](https://www.powerlanguage.co.uk/wordle/)
 
   `python play_wordle.py`
+  
+  It works this way:
+  
+  ```
+  your guess: broad
+  ⬛️⬛️🟨⬛️⬛️. your guess: joker
+  ⬛️🟩⬛️🟩⬛️. your guess: month
+  🟨🟩🟨⬛️⬛️. your guess: women
+  🟩🟩🟩🟩🟩. congratulations!
+  ```
+  
+  
 
+* Play [Absurdle](https://qntm.org/files/absurdle/absurdle.html) -- A tough version, strongly recommend! The correct answer changes according to your prediction
 
-
-* Play [Absurdle](https://qntm.org/files/absurdle/absurdle.html) -- A tough version, strongly recommend!
-
-​	`python play_absurdle.py`
-
-
+	`python play_absurdle.py`
+	
+	It works this way:
+	
+	```
+	⬛️⬛️⬛️⬛️⬛️. your guess: mouse
+	⬛️🟩⬛️⬛️⬛️. your guess: hobby
+	🟨🟩⬛️⬛️⬛️. your guess: horny
+	🟨🟩🟩⬛️⬛️. your guess: forth
+	⬛️🟩🟩🟨🟩. your guess: torch
+	🟩🟩🟩🟩🟩. congratulations!
+	```
+	
+	
 
 ### Notes
 
