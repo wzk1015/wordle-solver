@@ -65,11 +65,23 @@ Find it difficult to solve [Wordle](https://www.powerlanguage.co.uk/wordle/)? He
 
 
 
+* Play [Wordle](https://www.powerlanguage.co.uk/wordle/)
+
+  `python play_wordle.py`
+
+
+
+* Play [Absurdle](https://qntm.org/files/absurdle/absurdle.html) -- A tough version, strongly recommend!
+
+​	`python play_absurdle.py`
+
+
+
 ### Notes
 
 `suggestion` is based on a simple greedy strategy: computes score of all words based on `freq` (The frequency that one letter appears at one position), and select the word with highest score.
 
 It is a rather simple method which can still be improved, for example we sometimes choose a word with unused characters to narrow down possible answers.
 
-`test_solver_all` now gives an average attempts of 3.8 times (maximum 8 times). Alternative methods on Github can be no greater than maxmimum 6 times.
+`test_solver_all` now gives an average attempts of 3.9 times (maximum 9 times). Alternative methods on Github can be no greater than maxmimum 6 times.
 
